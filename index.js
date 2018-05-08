@@ -1,8 +1,5 @@
-/*
 
-All questions and answers are in a an array of objects called questions
-
-*/
+/** All questions and answers are in a an array of objects called questions */
 
 let questions = [
   {question: `This famous portrait entitled Mona Lisa was created by which of the following artists?`,
@@ -10,15 +7,15 @@ let questions = [
     choice2: "Edgar Degas",
     choice3: "Leonardo da Vinci",
     choice4: "Claude Monet",
+    /*Get answer chosen and return true or false*/
     isRight: function(answer){
-        if(this.choice3 == answer){
-          //totalRight++;
-          return true;
-        }
+      if(this.choice3 == answer){
+        return true;
+      }
       else{
         return false;
       }
-    },// get answer chosen and use if to determine if right. return result and increment counter....
+    },
     imgsrc: "https://imgur.com/QbtQFDM.jpg",
     imgalt: "Picture of Mona Lisa painting"
   }, 
@@ -28,16 +25,15 @@ let questions = [
     choice2:  "Green, Blue, and Orange",
     choice3:  "Red, Yellow, and Green",
     choice4:  "Blue, Yellow, and Red",
+
     isRight: function(answer){
-        if(this.choice4 == answer){
-          return true;
-           //totalRight++;
-          }
-          else{
-            return false;
-          }
-        //console.log(answer)
-        },
+      if(this.choice4 == answer){
+        return true;
+      }
+      else{
+        return false;
+      }
+    },
   }, 
 
   {question: `In pottery, clay is inserted into a chamber where the high temperatures transforms the clay 
@@ -46,16 +42,16 @@ let questions = [
     choice2:  "Kettle",
     choice3:  "Claybox",
     choice4:  "Easy-Bake",
+
     isRight: function(answer, totalRight){
-        if(this.choice1 == answer){
-           return true;
-           //totalRight++;
-          }
-          else{
-            return false;
-          }
-        //console.log(answer)
-        },
+      if(this.choice1 == answer){
+        return true;
+      }
+      else{
+        return false;
+      }
+    },
+    /** Picture accompanying question */
     imgsrc: "https://i.imgur.com/PBZymxn.jpg",
     imgalt: "Picture of pottery tool"
   }, 
@@ -66,44 +62,47 @@ let questions = [
     choice2:  "Glaze",
     choice3:  "Oil Pastels",
     choice4:  "Watercolor",
+
     isRight: function(answer, totalRight){
-        if(this.choice2 == answer){
-            return true;
-           //totalRight++;
-          }
-          else{
-            return false;
-          }
-        //console.log(answer)
-        },
+      if(this.choice2 == answer){
+          return true;
+        }
+        else{
+          return false;
+        }
+      },
   },
-  
+
   {question: `This form of art entitled Cain and Abel by Lovis Corinth is an example of what type of medium?`,
     choice1: "Oil Pastels on Wood",
     choice2:  "Watercolor on Canvas",
     choice3:  "Acrylic on Canvas",
     choice4:  "Woodcut Relief Printing",
+
     isRight: function(answer, totalRight){
-        if(this.choice4 == answer){
-            return true;
-           //totalRight++;
-          }
-          else{
-            return false;
-          }
-        //console.log(answer)
-        },
+      if(this.choice4 == answer){
+        return true;
+      }
+      else{
+        return false;
+      }
+    },
+    /** Picture accompanying question */
     imgsrc: "https://i.imgur.com/QAwHOSf.png",
     imgalt: "Pic of Cain and Abel"  
-  }, ];
+  }, 
+];
 
-  let totalRight = 0;
-  let index = 0;
+/** Global Variables */
+let totalRight = 0;
+let index = 0;
 
+/**This function will return results based on the number of questions the user gets right, and displays a 
+category title, picture, and description of title*/
 function results(){
   $("header").text(`Results`);
   $(".results").show();
-  $("#Question1").hide(); //hide all other elements but the "press to start button"
+  $("#Question1").hide();
   $(".col-6").hide();
   $(".results").html(`<div class="startagain"><p>You got ${totalRight} out of ${questions.length} questions correct!</p>`);
 
@@ -127,37 +126,53 @@ function results(){
   }
 
   $(".startagain").append(`<button class="again">Try Again?</button></p></div>`);
-  
-    
+
+
+  /**This will allow the user to determine whether or not they would like to play again*/
   $(".results").on("click", ".again", function(event){
     $(".results").hide();
     totalRight = 0;
     index = 0;
-   //console.log(`clicked ${totalRight}  ${index}`);
     $("header").html(`<h1>Do You Even Art?</h1>`);
     $(".beginButton").show();
     main();
-  });//alert(`done   ${totalRight} `);
+  });
 }
 
-function pictureInput (){//toggles formatting from one column to 2 and pulls correct image info
-  if('imgsrc' in questions[index])//if there's an image involved in the quiz question..
+/**This function toggles formatting from one column to 2 and pulls correct image info if there is an accompanying picture*/
+function pictureInput (){
+
+  //If there's an image involved in the quiz question show picture div
+  if('imgsrc' in questions[index])
   {
-    $(".col-6").show();//show picture div
-    $(".picref").attr('src', questions[index].imgsrc).attr('alt', questions[index].imgalt);//input correct picture
-    $(".js-question .col-12").removeClass("col-12").addClass("col-6"); //format two side by side columns
-    $(".nextQuestion").removeClass("nextQuestion").addClass("nextQuestion2"); //formatting of next button needs to be change
+    $(".col-6").show();
+
+    //Input correct picture
+    $(".picref").attr('src', questions[index].imgsrc).attr('alt', questions[index].imgalt);
+
+    //Format two side by side columns
+    $(".js-question .col-12").removeClass("col-12").addClass("col-6"); 
+
+    //Formatting of next button is changed
+    $(".nextQuestion").removeClass("nextQuestion").addClass("nextQuestion2"); 
     return true;
   }
+
+  //If there's not an image involved in the quiz question format for question only
   else if($(".js-question .col-6").show())
   {
-    $(".js-question .col-6").removeClass("col-6").addClass("col-12");//reformat question div
-    $(".js-pic .col-6").hide();//hide picture div
+    //Reformat question div
+    $(".js-question .col-6").removeClass("col-6").addClass("col-12");
+    //Hide picture div
+    $(".js-pic .col-6").hide();
+
+    //Formatting of next button is changed
     $(".nextQuestion2").removeClass("nextQuestion2").addClass("nextQuestion");
     return false;
   }
 }
 
+/**This function gives instant feeback on the question after answering*/
 function feedback(value) {
   if(questions[index].isRight(value)){
     totalRight++;
@@ -173,7 +188,7 @@ function feedback(value) {
   }
   else if(index === questions.length -1)
   {
-    results();//Complete! see results. Submit and go to results function page 
+    results();
   }
   else{
     index++;
@@ -181,13 +196,13 @@ function feedback(value) {
   }
 }
 
- //this function will trade out the questions upon a click on the submit or next question button
-  
-  //clear field before going to next question
-
+ 
+/**This function will trade out the questions upon a click on the submit or next question button*/
 function DisplayQuestion(){
-  $("header").text(`Question ${index + 1} out of ${questions.length}`); // display question number at the top
-  pic = pictureInput();///call picture input function which toggles formatting from one column to 2
+  // Display question number at the top
+  $("header").text(`Question ${index + 1} out of ${questions.length}`); 
+  // Call picture input function which toggles formatting from one column to 2
+  pic = pictureInput();
 
   $(".quizTime").html(`<form id="Question1">
                       <div class ="question">${questions[index].question}</div>
@@ -214,7 +229,7 @@ function DisplayQuestion(){
                       
                       </form>`);
 
-  if(index === questions.length -1) {//if its the last question..
+  if(index === questions.length -1) {
     $("#Question1").append(`<button type="submit" class="nextQuestion2">See results</button>`);
   }
   else{
@@ -225,18 +240,18 @@ function DisplayQuestion(){
         event.preventDefault();
         let value = $('input[name=Choices]:checked').val();
         feedback(value);
-  });  // need to define answer and click button to submit...  //go to submit function
+  });  
 }
 
 
 function begin(){
-  $("#Question1").hide(); //hide all other elements but the "press to start button"
+  $("#Question1").hide(); 
   $(".col-6").hide();
-  $(".startup").show(); //show start up page text
+  $(".startup").show();
 
   $("main").on("click", ".beginButton", function(event){
-    $(".startup").hide(); // hide startup text
-    $(".beginButton").hide();//hide startup button
+    $(".startup").hide(); 
+    $(".beginButton").hide();
     DisplayQuestion();
   });
 }

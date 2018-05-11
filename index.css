@@ -17,6 +17,10 @@ footer {
   text-align: center;
 }
 
+a {
+  color: #005999;
+}
+
 header {
   background: #005999;
   text-align: center;
@@ -33,7 +37,7 @@ img {
   border-radius: 2px;
 }
 
-p {
+p, a {
   font-size: 30px;
   text-align: center;
 }
@@ -79,7 +83,8 @@ p {
 }
 
 .startup, 
-.startagain {
+.startagain, 
+a {
 	text-align: center;
   margin-top: auto;
   margin-bottom: auto;

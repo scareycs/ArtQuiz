@@ -109,7 +109,7 @@ function results(){
   if(totalRight === 0){
     $(".startagain").append(`<img src="https://i.imgur.com/RsJWX5X.jpg" alt="baby with a paint brush in the mouth">
                             <p>You know nothing of the visual art world. 
-                            Maybe take a stroll through your nearest art gallery soon.</p>`);
+                            Maybe take a stroll through your <a href="https://scareycs.github.io/ArtMuseums/">nearest art gallery</a> soon.</p>`);
   }
   else if(totalRight <= 3){
     $(".startagain").append(`<img src="https://i.imgur.com/F9A4WBK.jpg" alt="toddler fingerpainting">
@@ -126,7 +126,6 @@ function results(){
   }
 
   $(".startagain").append(`<button class="again">Try Again?</button></p></div>`);
-
 
   /**This will allow the user to determine whether or not they would like to play again*/
   $(".results").on("click", ".again", function(event){
@@ -146,13 +145,10 @@ function pictureInput (){
   if('imgsrc' in questions[index])
   {
     $(".col-6").show();
-
     //Input correct picture
     $(".picref").attr('src', questions[index].imgsrc).attr('alt', questions[index].imgalt);
-
     //Format two side by side columns
     $(".js-question .col-12").removeClass("col-12").addClass("col-6"); 
-
     //Formatting of next button is changed
     $(".nextQuestion").removeClass("nextQuestion").addClass("nextQuestion2"); 
     return true;
@@ -174,13 +170,15 @@ function pictureInput (){
 
 /**This function gives instant feeback on the question after answering*/
 function feedback(value) {
+
+  /*optional alert windows
   if(questions[index].isRight(value)){
     totalRight++;
     alert("That's correct!");
   }
   else{
     alert(`${value}? No.. That's not right.`);
-  }
+  }*/
   
   if(index === questions.length -2){
     index++;

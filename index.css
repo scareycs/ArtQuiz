@@ -32,9 +32,10 @@ header {
 }
 
 img {
-  max-height:500px;
+  max-width:50vh;
   border: 3px solid #005999;
   border-radius: 2px;
+  margin: auto;
 }
 
 p, a {
@@ -100,11 +101,6 @@ a {
 .nextQuestion {
 	position: relative;
   left: 600px;
-}
-
-.picref {
-	width: 290px;
-  height: 398px;
 }
 
 .container, 

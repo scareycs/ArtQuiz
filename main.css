@@ -30,7 +30,7 @@
 	padding-left: 1.04166666%;
   padding-right: 1.04166666%;
   float:left;
-   width: 100%;
+  width: 100%;
    /*margin: 0px;*/
 }
 /*.beginButton {
@@ -45,7 +45,7 @@
 
 
 /* Non-mobile, grid */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 1030px) {
 .col-12 {
     width: 100%;
   }

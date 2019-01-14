@@ -1,6 +1,7 @@
 body {
   background: #75DDFF;
   color: #005999;
+  margin: 0px;
 }
 
 footer {
@@ -41,6 +42,10 @@ img {
 p, a {
   font-size: 30px;
   text-align: center;
+}
+
+h1 {
+  margin: 0px;
 }
 
 .again,
@@ -106,7 +111,7 @@ a {
 .container, 
 .quizcontainer, 
 .quiztime {
-	height: 400px;  
+	min-height: 400px;
 }
 
 .container {

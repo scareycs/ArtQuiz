@@ -1,21 +1,12 @@
-body {
-  background: #75DDFF;
-  color: #005999;
-  margin: 0px;
-}
+html {
+  min-height: 100%;
+  background-image: linear-gradient(#31b4ff, #c374f1);
+} 
 
-footer {
-  height: 40px;
-  position: fixed;
-  right: 0;
-  left: 0;
-  width: 100%;
-  bottom:0;
-  background: #005999;
-  color: #A3D9FF;
-  padding-top:10px; 
-  font-size: 12px;
-  text-align: center;
+body {
+  color: white;
+  margin: 0px;
+ 
 }
 
 a {
@@ -23,19 +14,17 @@ a {
 }
 
 header {
-  background: #005999;
   text-align: center;
-  font-size:30px;
+  font-size: 30px;
   width: 100%;
-  color: #A3D9FF;
+  color: white;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
 img {
-  max-width:50vh;
-  border: 3px solid #005999;
-  border-radius: 2px;
+  max-width: 45vh;
+  border-radius: 13px;
   margin: auto;
 }
 
@@ -48,31 +37,65 @@ h1 {
   margin: 0px;
 }
 
+.again {
+  box-shadow: 0px 5px 10px #7798ab;
+  border: 1px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0px;
+  width: 140px;
+  background: #ddf1fd;
+  height: 80px;
+  font-size: 20px;
+  color: #06456a;
+}
+
 .again,
 .beginButton {
   top: 123px;
   position:relative;
 }
 
-.beginButton, 
-.nextQuestion, 
-.nextQuestion2, 
-.again {
-  background: #75DDFF;
-  color: #005999;
-  width: 257px;
-  height: 54px;
-  font-size: 20px;
-  font-weight: bold;
-  border: 3px solid #005999;
-  border-radius: 5px;
+.beginButton {
+  margin: auto;
+  display: flex;
+  border: none;
+  background: transparent;
+  height: 80px;
 }
 
-.beginButton:hover, 
-.nextQuestion:hover, 
-.nextQuestion2:hover, 
-.again:hover {
-  background: white;
+.fa-angle-right {
+  padding-top: 20px;
+  float: right;
+  font-size: 40px;
+  padding-right: 10px;
+  color: white;
+}
+
+.icon {
+  box-shadow: 5px 5px 7px #7798ab;
+  border: 1px;
+  background: #81caf4;
+  margin: 0px;
+  width: 40px;
+  height: 80px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.buttonText {
+  padding: 30px;
+}
+
+.buttonText,
+.buttonText2 {
+  box-shadow: 0px 5px 10px #7798ab;
+  border: 1px;
+  border-radius: 10px 0px 0px 10px;
+  margin: 0px;
+  width: 140px;
+  background: #ddf1fd;
+  height: 80px;
+  font-size: 20px;
+  color: #06456a;
 }
 
 .Choice1, 
@@ -89,7 +112,7 @@ h1 {
 }
 
 .startup, 
-.startagain, 
+.startagain,
 a {
 	text-align: center;
   margin-top: auto;
@@ -104,6 +127,7 @@ a {
 }
 
 .nextQuestion {
+  
 	position: relative;
   left: 600px;
 }

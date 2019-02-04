@@ -102,7 +102,7 @@ category title, picture, and description of title*/
 function results(){
   $("header").text(`Results`);
   $(".results").show();
-  $("#Question1").hide();
+  $("#Question").hide();
   $(".col-6").hide();
   $(".results").html(`<div class="startagain"><p>You got ${totalRight} out of ${questions.length} questions correct!</p>`);
 
@@ -204,7 +204,7 @@ function DisplayQuestion(){
   // Call picture input function which toggles formatting from one column to 2
   pic = pictureInput();
 
-  $(".quizTime").html(`<form id="Question1">
+  $(".quizTime").html(`<form id="Question">
                       <div class ="question">${questions[index].question}</div>
                       
                       <div class="Choice1">
@@ -230,13 +230,20 @@ function DisplayQuestion(){
                       </form>`);
 
   if(index === questions.length -1) {
-    $("#Question1").append(`<button type="submit" class="nextQuestion2">See results</button>`);
+    $("#Question").append(`<button type="submit" class="seeResults">
+                            <div class="buttonText2">See Results</div>
+                            <div class="icon">
+                              <i class="fas fa-angle-right"></i>
+                            </div>
+                           </button>`);
   }
   else{
-    $("#Question1").append(`<button type="submit" class="nextQuestion2">Continue</button>`);
+    $("#Question").append(`<button type="submit" class="nextQuestion2">
+                              <i class="fas fa-angle-right"></i>
+                            </button>`);
   }
                            
- $("#Question1").submit(function(event){
+ $("#Question").submit(function(event){
         event.preventDefault();
         let value = $('input[name=Choices]:checked').val();
         feedback(value);
@@ -246,7 +253,7 @@ function DisplayQuestion(){
 
 function begin(){
   $(".results").hide();
-  $("#Question1").hide(); 
+  $("#Question").hide(); 
   $(".col-6").hide();
   $(".startup").show();
 

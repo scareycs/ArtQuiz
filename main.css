@@ -20,10 +20,31 @@
   clear: both;
 }
 
+.seeResults,
 .nextQuestion2 {
+    border: none;
+    margin: 0px;
+    height: 70px;
+    background: transparent;
     position: relative;
-    left: 38px;
-    top: 32px;
+}
+
+.buttonText2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.nextQuestion2 {
+  left: 80%;
+  width: 90px;
+}
+
+.seeResults {
+  display: flex;
+  width: 215px;
+  left: 60%;
 }
 
 .col-6,
@@ -52,8 +73,8 @@
     }
 
   .nextQuestion2{
-  	 position: relative;
-      left: 226px;
+     position: relative;
+      left: 75%;
       top: 68px;
   }
 

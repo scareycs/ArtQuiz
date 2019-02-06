@@ -1,6 +1,8 @@
 html {
+  font-size: 20px;
   min-height: 100%;
   background-image: linear-gradient(#31b4ff, #c374f1);
+  font-family: 'Roboto', sans-serif;
 } 
 
 body {
@@ -14,27 +16,27 @@ a {
 }
 
 header {
-  text-align: center;
-  font-size: 30px;
-  width: 100%;
-  color: white;
-  margin-bottom: 30px;
-  font-weight: bold;
+    margin-left: 0px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 img {
-  max-width: 45vh;
+  max-width: 40vh;
   border-radius: 13px;
   margin: auto;
 }
 
-p, a {
-  font-size: 30px;
-  text-align: center;
+.startup p{
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-h1 {
-  margin: 0px;
+p, a {
+  text-align: center;
 }
 
 .again {
@@ -45,7 +47,6 @@ h1 {
   width: 140px;
   background: #ddf1fd;
   height: 80px;
-  font-size: 20px;
   color: #06456a;
 }
 
@@ -87,6 +88,7 @@ h1 {
 
 .buttonText,
 .buttonText2 {
+  font-size: 20px;
   box-shadow: 0px 5px 10px #7798ab;
   border: 1px;
   border-radius: 10px 0px 0px 10px;
@@ -94,7 +96,6 @@ h1 {
   width: 140px;
   background: #ddf1fd;
   height: 80px;
-  font-size: 20px;
   color: #06456a;
 }
 
@@ -108,7 +109,7 @@ h1 {
 .Choice2 label, 
 .Choice3 label, 
 .Choice4 label {
-  font-size:25px;
+
 }
 
 .startup, 
@@ -143,16 +144,17 @@ a {
 }
 
 .question {
-  font-size: 30px;
   margin-bottom: 55px;
 }
 
 #Question {
-	margin: 21px;
-	margin-left: 50px;
 }
 
 .results {
   height: 1000px;
 }
 
+.startagain p {
+  margin-left: 45px;
+  margin-right: 45px;
+}

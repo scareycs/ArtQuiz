@@ -22,7 +22,7 @@
 
 .seeResults,
 .nextQuestion2 {
-    border: none;
+    border: 1px;
     margin: 0px;
     height: 70px;
     background: transparent;
@@ -37,8 +37,13 @@
 }
 
 .nextQuestion2 {
+  border-radius: 50%;
   left: 80%;
   width: 90px;
+}
+
+.nextQueston2:hover {
+  background: rgba(255,255,255,0.5);
 }
 
 .seeResults {
@@ -67,12 +72,17 @@
 
 
 /* Non-mobile, grid */
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1024px) {
+
+  h1 {
+    margin-top: 5%;
+  }
+
   .col-12 {
       width: 100%;
-    }
+  }
 
-  .nextQuestion2{
+  .nextQuestion2 {
      position: relative;
       left: 75%;
       top: 68px;

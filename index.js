@@ -1,5 +1,5 @@
 
-/** All questions and answers are in a an array of objects called questions */
+/** All questions and answers are in an array of objects called questions */
 
 let questions = [
   {question: `This famous portrait entitled Mona Lisa was created by which of the following artists?`,
@@ -96,6 +96,8 @@ let questions = [
 /** Global Variables */
 let totalRight = 0;
 let index = 0;
+let statusBar = questions.map((item, index) => index+1);
+
 
 /**This function will return results based on the number of questions the user gets right, and displays a 
 category title, picture, and description of title*/
@@ -196,11 +198,17 @@ function feedback(value) {
   }
 }
 
+
+
+
+
  
 /**This function will trade out the questions upon a click on the submit or next question button*/
 function DisplayQuestion(){
-  // Display question number at the top
+  // Display question number at the top'
+
   $("header").text(`Question ${index + 1} out of ${questions.length}`); 
+
   // Call picture input function which toggles formatting from one column to 2
   pic = pictureInput();
 

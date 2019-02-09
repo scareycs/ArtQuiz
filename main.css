@@ -47,6 +47,8 @@
 }
 
 .seeResults {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   width: 215px;
   left: 60%;
@@ -73,6 +75,10 @@
 
 /* Non-mobile, grid */
 @media only screen and (min-width: 1024px) {
+  body {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 
   h1 {
     margin-top: 5%;

@@ -124,7 +124,7 @@ function results(){
   }
   else if(totalRight === questions.length){
     $(".startagain").append(`<img src="https://i.imgur.com/77znb1z.jpg" alt="Bob Ross Smiling and painting">
-                             <p>You're a Perfect Pacasso! You know the lingo and can navigate your way around the art galleries and studios!</p>`);
+                             <p>You're a Perfect Picasso! You know the lingo and can navigate your way around the art galleries and studios!</p>`);
   }
 
   $(".startagain").append(`<button class="again">Try Again?</button></p></div>`);

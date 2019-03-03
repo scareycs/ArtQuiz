@@ -108,17 +108,25 @@ p, a {
   color: #06456a;
 }
 
-.Choice1, 
-.Choice2, 
-.Choice3 {
-  margin-bottom: 25px;
+.choice1, 
+.choice2, 
+.choice3 {
+  margin-bottom: 15px;
 }
 
-.Choice1 label, 
-.Choice2 label, 
-.Choice3 label, 
-.Choice4 label {
+.choice1 label, 
+.choice2 label, 
+.choice3 label,
+.choice4 label{
+  padding: 5px;
+}
 
+.choice1 :hover, 
+.choice2 :hover, 
+.choice3 :hover, 
+.choice4 :hover {
+  background: rgba(255,255,255,0.3);
+  border-radius: 6px;
 }
 
 .startup, 
@@ -136,8 +144,7 @@ a {
 	border-style: 2px;
 }
 
-.nextQuestion {
-  
+.nextQuestion { 
 	position: relative;
   left: 600px;
 }
@@ -153,7 +160,9 @@ a {
 }
 
 .question {
-  margin-bottom: 55px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid white;
 }
 
 #Question {
@@ -162,4 +171,20 @@ a {
 .startagain p {
   margin-left: 45px;
   margin-right: 45px;
+}
+
+input#choice1,
+input#choice2,
+input#choice3,
+input#choice4 {
+  display: none;
+}
+
+#choice1:checked + label,
+#choice2:checked + label,
+#choice3:checked + label,
+#choice4:checked + label {
+  background: rgba(255,255,255,0.3);
+  border: 2px solid white;
+  border-radius: 6px;
 }

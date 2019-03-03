@@ -215,24 +215,24 @@ function DisplayQuestion(){
   $(".quizTime").html(`<form id="Question">
                       <div class ="question">${questions[index].question}</div>
                       
-                      <div class="Choice1">
-                      <input type="radio" name="Choices" id="Choice1" value =${questions[index].choice1} required>
-                      <label for="Choice1">${questions[index].choice1}</label>
+                      <div class="choice1">
+                      <input type="radio" name="choices" id="choice1" value =${questions[index].choice1} required>
+                      <label for="choice1">${questions[index].choice1}</label>
                       </div>
                       
-                      <div class="Choice2">
-                      <input type="radio" name="Choices" id="Choice2" value ="${questions[index].choice2}" required>
-                      <label for="Choice2">${questions[index].choice2}</label>
+                      <div class="choice2">
+                      <input type="radio" name="choices" id="choice2" value ="${questions[index].choice2}" required>
+                      <label for="choice2">${questions[index].choice2}</label>
                       </div>
                       
-                      <div class="Choice3">
-                      <input type="radio" name="Choices" id="Choice3" value ="${questions[index].choice3}" required>
-                      <label for="Choice3">${questions[index].choice3}</label>
+                      <div class="choice3">
+                      <input type="radio" name="choices" id="choice3" value ="${questions[index].choice3}" required>
+                      <label for="choice3">${questions[index].choice3}</label>
                       </div>
                       
-                      <div class="Choice4">
-                      <input type="radio" name="Choices" id="Choice4" value ="${questions[index].choice4}" required>
-                      <label for="Choice4">${questions[index].choice4}</label>
+                      <div class="choice4">
+                      <input type="radio" name="choices" id="choice4" value ="${questions[index].choice4}" required>
+                      <label for="choice4">${questions[index].choice4}</label>
                       </div>
                       
                       </form>`);
@@ -253,7 +253,7 @@ function DisplayQuestion(){
                            
  $("#Question").submit(function(event){
         event.preventDefault();
-        let value = $('input[name=Choices]:checked').val();
+        let value = $('input[name=choices]:checked').val();
         feedback(value);
   });  
 }

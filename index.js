@@ -147,7 +147,7 @@ function pictureInput (){
   //If there's an image involved in the quiz question show picture div
   if('imgsrc' in questions[index])
   {
-    $(".col-6").show();
+    $(".col-6").fadeIn();
 
     //Input correct picture
     $(".picref").attr('src', questions[index].imgsrc).attr('alt', questions[index].imgalt);
@@ -160,7 +160,7 @@ function pictureInput (){
     return true;
   }
 
-  //If there's not an image involved in the quiz question format for question only
+  //If there's not an image involved in the quiz question and the previous question had a pic
   else if($(".js-question .col-6").show())
   {
     //Reformat question div
@@ -211,7 +211,6 @@ function DisplayQuestion(){
 
   // Call picture input function which toggles formatting from one column to 2
   pic = pictureInput();
-
   $(".quizTime").html(`<form id="Question">
                       <div class ="question">${questions[index].question}</div>
                       
@@ -253,8 +252,10 @@ function DisplayQuestion(){
                            
  $("#Question").submit(function(event){
         event.preventDefault();
-        let value = $('input[name=choices]:checked').val();
-        feedback(value);
+        //$(this).fadeOut("slow", function(){
+          //$("#Question").submit();
+          let value = $('input[name=choices]:checked').val();
+          feedback(value);
   });  
 }
 

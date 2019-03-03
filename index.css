@@ -165,9 +165,6 @@ a {
   border-bottom: 1px solid white;
 }
 
-#Question {
-}
-
 .startagain p {
   margin-left: 45px;
   margin-right: 45px;
@@ -187,4 +184,19 @@ input#choice4 {
   background: rgba(255,255,255,0.3);
   border: 2px solid white;
   border-radius: 6px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0.0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#Question {
+  animation-duration: 3s;
+  animation-name: fadein;
 }

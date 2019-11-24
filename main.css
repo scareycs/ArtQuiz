@@ -74,7 +74,7 @@
 
 
 /* Non-mobile, grid */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1280px) {
   body {
     margin-left: 20%;
     margin-right: 20%;

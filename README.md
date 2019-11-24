@@ -6,3 +6,4 @@ This quiz will cover famous artists, art forms, color theory, and more! Are you 
 <h2>Github Pages</h2>
 
 https://scareycs.github.io/ArtQuiz/
+# NubianYogi
